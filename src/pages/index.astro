@@ -1,9 +1,37 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
-	<main class="m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]">
-	</main>
+  <main
+    class="m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-cols-4 lg:gap-4 lg:max-h-[800px]"
+  >
+    <Card
+      title="Hola! Soy Alexis Narvaez."
+      level="h1"
+      class="p-5 col-span-2 md:col-span-3 md:row-span-2 bg-zinc-300 dark:bg-zinc-800"
+    >
+      <p class={`text-lg md:text-2xl text-gray-800 dark:text-gray-200`}>
+        Soy <strong>Desarrollador Front-End</strong> con{" "}
+        <strong>React</strong>, además de eso cuento con experiencia en
+        tecnologias de <strong>Back-End</strong> como{" "}
+        <strong>PHP, Java y Python.</strong>
+      </p>
+      <p class={`text-lg md:text-2xl text-gray-800 dark:text-gray-200`}>
+        Me considero alguien centrado, constante y reflexivo en las cosas que
+        hago, lo cual me ha beneficiado para llegar al final de mis objetivos,
+        esto me ha permitido desarrollar la capacidad de pensar en mejores
+        soluciones.
+      </p>
+    </Card>
+    <Card
+      title="Hola! Soy Alexis Narvaez."
+      body="Hola soy el body"
+      level="h4"
+      href="/home"
+    >
+      Soy un lnk cd
+    </Card>
+  </main>
 </Layout>

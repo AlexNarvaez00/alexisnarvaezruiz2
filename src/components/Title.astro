@@ -1,0 +1,25 @@
+---
+
+interface Props{ 
+  level:string;
+  class?:string;
+}
+const { level } = Astro.props;
+
+const levelsClasses = {
+  'h1' : `text-3xl md:text-5xl mb-5 text-gray-800 dark:text-gray-300`,
+  'h2' : `text-2xl md:text-4xl mb-5 text-gray-800 dark:text-gray-300`,
+  'h3' : `text-xl md:text-3xl mb-5`,
+  'h4' : `text-lg md:text-xl`,
+  'h5' : `text-md md:text-lg`,
+  'h6' : `text-base md:text-md`,
+};
+
+---
+
+{ level == 'h1' ? <h1 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h1> : null }
+{ level == 'h2' ? <h2 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h2> : null }
+{ level == 'h3' ? <h3 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h3> : null }
+{ level == 'h4' ? <h4 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h4> : null }
+{ level == 'h5' ? <h5 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h5> : null }
+{ level == 'h6' ? <h6 class={`${levelsClasses[level]} ${Astro.props.class}`}><slot/></h6> : null }

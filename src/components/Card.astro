@@ -1,13 +1,37 @@
 ---
+import CardContent from "./CardContent.astro";
+import "./Card.css";
+
 interface Props {
-	title: string;
-	body: string;
-	href: string;
+	title?: string;
+	body?: string;
+	href?: string;
+  class?:string;
+  level:string 
 }
 
-const { href, title, body } = Astro.props;
+
+const { href, title, body, level } = Astro.props;
 ---
-<section>
-  <slot/>
+<section class={`card ${Astro.props.class}`}>
+  { href ? (
+      <a href={href} class="w-full h-full">
+        <CardContent 
+          title={title} 
+          body={body} 
+          level={level} 
+        >
+          <slot/>
+        </CardContent>  
+      </a>
+      ) : (
+      <CardContent 
+        title={title} 
+        body={body} 
+        level={level} 
+      >
+        <slot/>
+      </CardContent>
+    )}
 </section>
 

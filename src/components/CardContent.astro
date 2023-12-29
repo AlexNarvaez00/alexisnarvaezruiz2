@@ -1,0 +1,15 @@
+---
+import Title from "./Title.astro";
+
+interface Props{ 
+  title?:string;
+  body?:string;
+  level:string;
+}
+const { title, body, level } = Astro.props;
+---
+<>
+  {title ? <Title level={level}>{title}</Title> : null  }
+  <slot/>
+  {body ? <p class="text-base">{body}</p> : null }
+<>
