@@ -15,7 +15,7 @@ const { href, title, body, level } = Astro.props;
 ---
 <section class={`card ${Astro.props.class}`}>
   { href ? (
-      <a href={href} class="w-full h-full">
+      <a href={href} target="_blank" class="w-full h-full">
         <CardContent 
           title={title} 
           body={body} 
