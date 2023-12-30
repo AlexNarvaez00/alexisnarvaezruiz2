@@ -4,6 +4,8 @@ import Card from "../components/Card.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import Title from "../components/Title.astro";
+import Skills from "../components/Skills.astro";
+
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
@@ -60,13 +62,31 @@ import Title from "../components/Title.astro";
     >
       <Title class="font-extrabold" level="h1">24</Title>
     </Card>
-<Card
+    <Card
       title="Nivel de Ingles"
       body="2019-2021"
       level="h4"
       class="col-span-1 text-center flex flex-col justify-between bg-purple-300 p-2 md:p-5 dark:bg-purple-500 dark:shadow-lg dark:shadow-purple-600/60"
     >
       <Title class="font-extrabold" level="h1">B1</Title>
+    </Card>
+    <Card
+      level="h3"
+      href="/protfolio"
+      class="col-span-2 md:col-span-3 bg-[url('/code.jpg')] text-white dark:text-gray-200 dark:shadow-lg dark:shadow-black/60"
+    >
+      <div class="p-5 bg-white/20 w-full h-full dark:bg-black/20">
+        <Title level="h3">Proyectos y experiencias</Title>
+        <p class="text-lg md:text-2xl">
+          Aquí puedes ver mis proyectos, experiencias, prácticas y más.
+        </p>
+      </div>
+    </Card>
+    <Card
+      level="h1"
+      class="col-span-2 bg-fuchsia-300 p-5 dark:bg-fuchsia-500 dark:shadow-lg dark:shadow-fuchsia-600/60"
+    >
+      <Skills />
     </Card>
   </main>
 </Layout>
