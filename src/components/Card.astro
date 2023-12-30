@@ -1,5 +1,6 @@
 ---
 import CardContent from "./CardContent.astro";
+import ExternalLink from "./icons/ExternalLink.astro";
 import "./Card.css";
 
 interface Props {
@@ -13,9 +14,10 @@ interface Props {
 
 const { href, title, body, level } = Astro.props;
 ---
-<section class={`card ${Astro.props.class}`}>
+<section class={`card ${Astro.props.class} ${ href ? 'relative': '' }`}>
   { href ? (
       <a href={href} target="_blank" class="w-full h-full">
+        <ExternalLink class="absolute right-4 top-4 size-7" />
         <CardContent 
           title={title} 
           body={body} 
