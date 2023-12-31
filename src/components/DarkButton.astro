@@ -1,0 +1,55 @@
+---
+import "./DarkButton.css";
+
+interface Props {
+  class?: string;
+}
+---
+
+<div
+  class={`base-layer-button bg-violet-600 ${Astro.props.class}`}
+  id="dark-button"
+>
+  <span class="thumb" id="thumb"> </span>
+</div>
+
+<script>
+  const thumb = document.getElementById("thumb");
+
+  const isActiveDarkMode = () => {
+    return "theme" in localStorage && localStorage.theme == "dark";
+  };
+
+  const toggleMode = (active, callback) => {
+    if (active) {
+      localStorage.theme = "light";
+      thumb.innerHTML = "🌞";
+      if(callback) callback();
+    } else {
+      localStorage.theme = "dark";
+      thumb.innerHTML = "🌑";
+      if(callback) callback();
+    }
+  };
+
+  if (isActiveDarkMode()) {
+    localStorage.theme = "light";
+    thumb.innerHTML = "🌞";
+  } else {
+    localStorage.theme = "dark";
+    thumb.innerHTML = "🌑";
+  }
+
+  const buttonDark = document.getElementById("dark-button");
+  buttonDark.addEventListener("click", (event) => {
+    if (isActiveDarkMode()) {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+      thumb.innerHTML = "🌞";
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+      thumb.innerHTML = "🌑";
+    }
+  });
+</script>

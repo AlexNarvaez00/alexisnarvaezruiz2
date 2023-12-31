@@ -9,7 +9,7 @@ interface Props{
 const { title, body, level } = Astro.props;
 ---
 <>
-  {title ? <Title level={level}>{title}</Title> : null  }
+  {title ? <Title level={level} class="" >{title}</Title> : null  }
   <slot/>
-  {body ? <p class="text-base">{body}</p> : null }
+  {body ? <p class="text-base text-gray-800">{body}</p> : null }
 <>

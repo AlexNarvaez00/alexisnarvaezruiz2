@@ -7,6 +7,7 @@ import Title from "../components/Title.astro";
 import Skills from "../components/Skills.astro";
 import Mail from "../components/icons/Mail.astro";
 import X from "../components/icons/X.astro";
+import DarkButton from "../components/DarkButton.astro";
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
@@ -16,10 +17,11 @@ import X from "../components/icons/X.astro";
       class="container m-auto p-2 grid gap-2 max-w-6xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-cols-5 lg:gap-4 lg:min-h-[800px]"
     >
       <Card
-        title="Hola! Soy Alexis Narvaez."
+        title=""
         level="h1"
         class="p-5 col-span-2 md:col-span-3 md:row-span-2 bg-zinc-300 dark:bg-zinc-800"
       >
+        <Title level="h1" class="dark:text-gray-300">Hola! Soy Alexis Narvaez.</Title>
         <p class={`text-lg md:text-2xl text-gray-800 dark:text-gray-200`}>
           Soy <strong>Desarrollador Front-End</strong> con{" "}
           <strong>React</strong>, además de eso cuento con experiencia en
@@ -39,7 +41,7 @@ import X from "../components/icons/X.astro";
         class="col-span-1 bg-white shadow-lg flex items-center py-10 md:p-0"
       >
         <div class="w-full h-full m-auto flex justify-center items-center">
-          <GithubIcon class="size-12" />
+          <GithubIcon class="size-12 text-gray-800" />
         </div>
       </Card>
       <Card
@@ -55,7 +57,7 @@ import X from "../components/icons/X.astro";
         level="h1"
         class="col-span-1 md:col-span-2 bg-violet-300 flex dark:bg-violet-500 dark:shadow-lg dark:shadow-violet-600/60"
       >
-        Boton de modo oscuro xd
+        <DarkButton class="m-auto"/>
       </Card>
       <Card
         title="Edad"
@@ -63,7 +65,7 @@ import X from "../components/icons/X.astro";
         level="h4"
         class="col-span-1 bg-amber-300 text-center flex flex-col justify-between p-5 dark:bg-amber-500 dark:shadow-lg dark:shadow-amber-600/60"
       >
-        <Title class="font-extrabold" level="h1">24</Title>
+        <Title class="font-extrabold text-gray-800" level="h1">24</Title>
       </Card>
       <Card
         title="Nivel de Ingles"
@@ -71,7 +73,7 @@ import X from "../components/icons/X.astro";
         level="h4"
         class="col-span-1 text-center flex flex-col justify-between bg-purple-300 p-2 md:p-5 dark:bg-purple-500 dark:shadow-lg dark:shadow-purple-600/60"
       >
-        <Title class="font-extrabold" level="h1">B1</Title>
+        <Title class="font-extrabold text-gray-800" level="h1">B1</Title>
       </Card>
       <Card
         level="h3"
