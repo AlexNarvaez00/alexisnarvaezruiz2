@@ -4,6 +4,10 @@ const proyectsCollection = defineCollection({
   type: "content",
   scheme: z.object({
     title: z.string(),
+    tags: z.string().array(),
+    description: z.string(),
+    url: z.string().url(),
+    heroImage: z.string().optional(),
   }),
 });
 // 3. Export a single `collections` object to register your collection(s)

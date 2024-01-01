@@ -1,0 +1,9 @@
+---
+export interface Props{
+  href?: string;
+  class?: string
+}
+const { href } = Astro.props;
+---
+{ href ? <a href={href} class={`px-4 py-2 rounded-xl text-gray-800 dark:text-fuchsia-300 border-gray-800 dark:border-fuchsia-300 border-2 ${Astro.props.class}`} >
+<slot /></a> : null  }

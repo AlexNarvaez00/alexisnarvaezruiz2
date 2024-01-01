@@ -1,0 +1,42 @@
+---
+import Title from "../components/Title.astro";
+
+interface Props {
+  href: string;
+  title: string;
+  tags: string[];
+  description: string;
+  img?: string;
+}
+const { href, title, tags, description, img } = Astro.props;
+---
+
+<li class="rounded-3xl mt-3 bg-zinc-300 dark:bg-zinc-800 p-5">
+  <a href={href} target="_blank" class="flex gap-3">
+    <div class="flex flex-col gap-1 grow">
+      <Title level="h4" class="dark:text-white">{title}</Title>
+      <div>
+        <ul class="flex justify-start gap-2">
+          {
+            tags.map((tag) => (
+              <li class="bg-fuchsia-300 dark:bg-fuchsia-400 text-gray-800 py-1 px-2 text-xs rounded-lg font-semibold">
+                {tag}
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <p class="text-base text-gray-800 dark:text-white">{description}</p>
+      </div>
+      <div></div>
+    </div>
+    {
+      img && (
+        <div class="container-img h-24 w-52">
+          <img src={img} alt="banner" class="w-full h-full object-cover" />
+        </div>
+      )
+    }
+  </a>
+</li>
