@@ -1,8 +1,9 @@
 ---
 title: 'Creación de un Proyecto 🏭'
-description: 'Crear un proyecto de Spring Boot, es tan sencillo como ingresar a su [sitio oficial](https://start.spring.io/), recuerda que debes de seleccionar Maven y la versión de Java correspondiente'
+description: 'Crear un proyecto de Spring Boot, es tan sencillo como ingresar a su https://start.spring.io/, recuerda que debes de seleccionar Maven y la versión de Java correspondiente'
 pubDate: 'Dec 25 2022'
 heroImage: '/blog-placeholder-3.jpg'
+tags: [ Java, Spring Boot, Hibernate, java, spring framework, Spring Framework]
 ---
 
 Crear un proyecto de Spring Boot, es tan sencillo como ingresar a su [sitio oficial](https://start.spring.io/), recuerda que debes de seleccionar Maven y la versión de Java correspondiente.

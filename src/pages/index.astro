@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Grid from "../components/Grid.astro";
 import Card from "../components/Card.astro";
 import GithubIcon from "../components/icons/Github.astro";
 import LinkedInIcon from "../components/icons/LinkedIn.astro";
@@ -7,14 +8,14 @@ import Title from "../components/Title.astro";
 import Skills from "../components/Skills.astro";
 import Mail from "../components/icons/Mail.astro";
 import X from "../components/icons/X.astro";
+import Blogger from "../components/icons/Blogger.astro";
 import DarkButton from "../components/DarkButton.astro";
+
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
   <main class="m-auto w-full h-auto flex flex-col">
-    <div
-      class="m-auto p-2 grid gap-6 max-w-5xl overflow-hidden relative w-full sm:p-4 sm:gap-2 md:grid-cols-2 md:gap-3 md:p-6 lg:h-screen lg:grid-cols-5 lg:gap-6 lg:min-h-[800px]"
-    >
+    <Grid>
       <Card
         title=""
         level="h1"
@@ -93,7 +94,7 @@ import DarkButton from "../components/DarkButton.astro";
         <Skills />
       </Card>
       <Card
-        class="col-span-1 bg-sky-300 dark:bg-teal-500 p-10 md:p-0 dark:shadow-lg dark:shadow-teal-600/60 flex text-white"
+        class="col-span-1 bg-sky-300 dark:bg-teal-500 p-10 md:p-0 dark:shadow-lg dark:shadow-teal-600/60 flex text-gray-800"
         href="mailto:ruiznarvaezalexis@gmail.com"
         level="h1"
       >
@@ -102,7 +103,7 @@ import DarkButton from "../components/DarkButton.astro";
         </div>
       </Card>
       <Card
-        class="col-span-1 bg-blue-300 dark:bg-blue-500 dark:shadow-lg dark:shadow-blue-600/60 flex text-white"
+        class="col-span-1 bg-blue-300 dark:bg-blue-500 dark:shadow-lg dark:shadow-blue-600/60 flex text-gray-800"
         href=""
         level="h1"
         href="https://www.x.com"
@@ -111,6 +112,16 @@ import DarkButton from "../components/DarkButton.astro";
           <X class="size-12" />
         </div>
       </Card>
-    </div>
+<Card
+        class="col-span-1 bg-orange-300 dark:bg-orange-500 dark:shadow-lg dark:shadow-orange-600/60 flex text-gray-800"
+        href=""
+        level="h1"
+        href="/blog"
+      >
+        <div class="w-full h-full m-auto flex justify-center items-center">
+          <Blogger class="size-12 text-gray-800" />
+        </div>
+      </Card>
+    </Grid>
   </main>
 </Layout>
