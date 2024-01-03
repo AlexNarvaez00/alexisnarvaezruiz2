@@ -2,12 +2,15 @@
 import { type CollectionEntry, getCollection } from "astro:content";
 import PostLayout from "../../../layouts/PostLayout.astro";
 
+export const prerender = true;
+
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
   const paths =  posts.map((post) => ({
     params: { slug: post.slug.replace("java/", "") },
     props: post,
   }));
+
   return paths;
 }
 type Props = CollectionEntry<"blog">;
