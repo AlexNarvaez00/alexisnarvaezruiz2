@@ -17,14 +17,7 @@ interface Props {
   //Buttons elements
   const thumb = document.getElementById("thumb");
   const buttonDark = document.getElementById("dark-button");
-
-  /**
-   * @return Dark mode is active
-   */
-  const isActiveDarkMode = () => {
-    return "theme" in localStorage && localStorage.theme == "dark";
-  };
-
+ 
   /**
    * @param {boolean} active Dark mode active
    * @param {Function} callback
@@ -43,7 +36,6 @@ interface Props {
   };
 
   if (isActiveDarkMode()) {
-    document.documentElement.classList.add("dark");
     toggleMode(!isActiveDarkMode(),null);
   }
 

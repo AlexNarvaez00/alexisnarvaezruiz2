@@ -51,3 +51,20 @@ const { title } = Astro.props;
 	}
   */
 </style>
+
+<script>
+  /**
+   * @return Dark mode is active
+   */
+  const isActiveDarkMode = () => {
+    return "theme" in localStorage && localStorage.theme == "dark";
+  };
+  window.isActiveDarkMode = isActiveDarkMode;
+  
+  if (isActiveDarkMode()) {
+    document.documentElement.classList.add("dark");
+  }
+</script>
+
+
+
