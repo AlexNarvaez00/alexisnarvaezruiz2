@@ -5,7 +5,7 @@ import Layout from "./Layout.astro";
 import Button from "../components/Button.astro";
 import Title from "../components/Title.astro";
 
-type Props = CollectionEntry<"blog">;
+type Props = CollectionEntry<"blog">["data"];
 
 const { title, description, pubDate, heroImage } = Astro.props;
 ---
