@@ -4,13 +4,11 @@ import PostLayout from "../../../layouts/PostLayout.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
-  console.log(posts);
-
-
-  return posts.map((post) => ({
-    params: { slug: post.slug },
+  const paths =  posts.map((post) => ({
+    params: { slug: post.slug.replace("java/", "") },
     props: post,
   }));
+  return paths;
 }
 type Props = CollectionEntry<"blog">;
 const post = Astro.props;
@@ -18,6 +16,6 @@ const { Content } = await post.render();
 
 ---
 
-<PostLayout>
+<PostLayout  {...post.data}>
   <Content />
 </PostLayout>

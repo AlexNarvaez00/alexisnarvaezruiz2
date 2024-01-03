@@ -5,7 +5,7 @@ pubDate: 'Dec 25 2022'
 heroImage: '/blog-placeholder-3.jpg'
 ---
 
-![Untitled](/Untitled-1.png)
+![Untitled](/blog/Untitled-1.png)
 
 Puedes utilizar el editor que más te guste. Algunos buenos editores para programar en Java, son Eclipse y Visual Studio Code, junto con las extensiones específicas para este lenguaje.
 

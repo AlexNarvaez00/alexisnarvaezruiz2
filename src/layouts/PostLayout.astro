@@ -1,7 +1,23 @@
 ---
+import "../styles/post-styles.css";
+import type { CollectionEntry } from "astro:content";
 import Layout from "./Layout.astro";
+import Button from "../components/Button.astro";
+import Title from "../components/Title.astro";
+
+type Props = CollectionEntry<"blog">;
+
+const { title, description, pubDate, heroImage } = Astro.props;
 ---
 
-<Layout title="Hola">
-  <slot /> 
+<Layout title={`Alexis Narvaez ${title}`}>
+  <main class="m-auto w-full flex flex-col">
+    <div class="m-auto p-2 max-w-3xl relative w-full sm:p-4 md:p-6">
+      <Button href="/blog/" class="">Volver</Button>
+      <Title level="h1" class="dark:text-white mt-5 text-center">{title}</Title>
+      <div>
+        <slot />
+      </div>
+    </div>
+  </main>
 </Layout>

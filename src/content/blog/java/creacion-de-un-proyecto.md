@@ -8,7 +8,7 @@ tags: [ Java, Spring Boot, Hibernate, java, spring framework, Spring Framework]
 
 Crear un proyecto de Spring Boot, es tan sencillo como ingresar a su [sitio oficial](https://start.spring.io/), recuerda que debes de seleccionar Maven y la versión de Java correspondiente.
 
-![Untitled](/Untitled.png)
+![Untitled](/blog/Untitled.png)
 
 ## Dependencias necesarias para Spring Boot 🐀.
 
