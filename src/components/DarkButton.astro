@@ -10,14 +10,19 @@ interface Props {
   class={`base-layer-button bg-violet-600 ${Astro.props.class}`}
   id="dark-button"
 >
-  <span class="thumb flex justify-center items-center" id="thumb"> </span>
+  <span class="thumb flex justify-center items-center [img>]:w-full" id="thumb"> </span>
 </div>
 
 <script>
   //Buttons elements
   const thumb = document.getElementById("thumb");
   const buttonDark = document.getElementById("dark-button");
- 
+
+  const sunIcon = document.createElement("img");
+  sunIcon.src = "/Sun.svg";
+  const moonIcon = document.createElement("img");
+  moonIcon.src = "/Moon.svg";
+
   /**
    * @param {boolean} active Dark mode active
    * @param {Function} callback
@@ -25,11 +30,11 @@ interface Props {
   const toggleMode = (active, callback) => {
     if (active) {
       localStorage.theme = "light";
-      thumb.innerHTML = "🌞";
+      thumb.replaceChildren(sunIcon);
       thumb.classList.remove("left-1/2");
     } else {
       localStorage.theme = "dark";
-      thumb.innerHTML = "🌑";
+      thumb.replaceChildren(moonIcon);
       thumb.classList.add("left-1/2");
     }
     if (callback) callback();
