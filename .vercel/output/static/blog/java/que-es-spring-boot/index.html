@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="es" class="dark"> <head><!-- Global Metadata --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.0.8"><!-- Font preloads --><!-- <link rel="preload" href="/fonts/atkinson-regular.woff" as="font" type="font/woff" crossorigin />
+<link rel="preload" href="/fonts/atkinson-bold.woff" as="font" type="font/woff" crossorigin />
+--><!-- Canonical URL --><!-- <link rel="canonical" href={canonicalURL} />
+--><!-- Primary Meta Tags --><title>¿Que es Spring Boot, y que es Spring Framework?</title><meta name="title" content="¿Que es Spring Boot, y que es Spring Framework?"><meta name="description" content="Spring Boot es un marco de desarrollo de aplicaciones Java que simplifica la configuración y el desarrollo de aplicaciones"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="http://localhost:4321/blog/java/que-es-spring-boot/"><meta property="og:title" content="¿Que es Spring Boot, y que es Spring Framework?"><meta property="og:description" content="Spring Boot es un marco de desarrollo de aplicaciones Java que simplifica la configuración y el desarrollo de aplicaciones"><meta property="og:image" content="http://localhost:4321/blog-placeholder-1.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="http://localhost:4321/blog/java/que-es-spring-boot/"><meta property="twitter:title" content="¿Que es Spring Boot, y que es Spring Framework?"><meta property="twitter:description" content="Spring Boot es un marco de desarrollo de aplicaciones Java que simplifica la configuración y el desarrollo de aplicaciones"><meta property="twitter:image" content="http://localhost:4321/blog-placeholder-1.jpg"><link rel="stylesheet" href="/_astro/index.qnlAhaGX.css" />
+<style>body{font-family:Atkinson,sans-serif;margin:0;padding:0;text-align:left;font-size:1.125rem;line-height:1.75rem;--tw-bg-opacity: 1;background-color:rgb(229 231 235 / var(--tw-bg-opacity));padding-top:2.25rem;padding-bottom:2.25rem;--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}:is(:where(.dark) body){--tw-bg-opacity: 1;background-color:rgb(17 24 39 / var(--tw-bg-opacity))}main{margin:auto;max-width:56rem;padding:1.5rem 4rem}h1,h2,h3,h4,h5,h6{--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}:is(:where(.dark) h1),:is(:where(.dark) h2),:is(:where(.dark) h3),:is(:where(.dark) h4),:is(:where(.dark) h5),:is(:where(.dark) h6){--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}h1,h2,h3,h4,h5,h6{margin-bottom:.5rem;line-height:1.25}h2,h3,h4,h5,h6{margin-top:3rem;font-weight:600}h1{font-size:1.875rem;line-height:2.25rem}@media (min-width: 768px){h1{font-size:3rem;line-height:1}}h2{font-size:1.5rem;line-height:2rem}@media (min-width: 768px){h2{font-size:2.25rem;line-height:2.5rem}}h3{font-size:1.25rem;line-height:1.75rem}@media (min-width: 768px){h3{font-size:1.875rem;line-height:2.25rem}}h4{font-size:1.125rem;line-height:1.75rem}@media (min-width: 768px){h4{font-size:1.5rem;line-height:2rem}}h5{font-size:1rem;line-height:1.5rem}@media (min-width: 768px){h5{font-size:1.25rem;line-height:1.75rem}}strong,b{font-weight:700}a{--tw-text-opacity: 1;color:rgb(14 165 233 / var(--tw-text-opacity))}a:hover{--tw-text-opacity: 1;color:rgb(2 132 199 / var(--tw-text-opacity))}:is(:where(.dark) a){--tw-text-opacity: 1;color:rgb(217 70 239 / var(--tw-text-opacity))}:is(:where(.dark) a:hover){--tw-text-opacity: 1;color:rgb(162 28 175 / var(--tw-text-opacity))}a:hover{text-decoration-line:underline}p{margin-bottom:1.5rem}:is(:where(.dark) p){--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}p code{font-weight:600}:is(:where(.dark) p code){color:#1f2937e6}textarea{width:100%;font-size:1rem;line-height:1.5rem}input{font-size:1rem;line-height:1.5rem}table{width:100%;--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}:is(:where(.dark) table){--tw-text-opacity: 1;color:rgb(209 213 219 / var(--tw-text-opacity))}tr{margin-bottom:.5rem}ul{margin-bottom:1rem;list-style-type:disc}ul li{--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}:is(:where(.dark) ul li){--tw-text-opacity: 1;color:rgb(229 231 235 / var(--tw-text-opacity))}ul li{@applyt mb-3;}img{height:auto;max-width:100%;border-radius:.5rem}code{padding:.125rem .5rem;border-radius:.5rem;--tw-bg-opacity: 1;background-color:rgb(209 213 219 / var(--tw-bg-opacity))}pre{border-radius:.5rem;padding:1rem;margin-bottom:1.5rem}pre>code{all:unset}blockquote{margin:0;padding-left:1.25rem;border-width:4px;--tw-border-opacity: 1;border-left-color:rgb(14 165 233 / var(--tw-border-opacity));font-size:1.125rem;line-height:1.75rem}hr{border-width:0px;border-top-width:2px;border-top-color:#1f293733}:is(:where(.dark) hr){border-top-color:#e5e7eb1a}@media (max-width: 720px){body{font-size:18px}main{padding:1em}}.hero-image{margin-top:1.5rem;width:100%}.hero-image img{display:block;border-radius:1.5rem;margin:0 auto;--tw-shadow: 0 25px 50px -12px rgb(0 0 0 / .25);--tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)}.prose{margin-left:auto;margin-right:auto;width:100%;--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}.title{margin-bottom:2rem;padding-top:.75rem;padding-bottom:.75rem;padding-left:0;padding-right:0;text-align:center;line-height:1.25}.date{margin-bottom:.5rem;--tw-text-opacity: 1;color:rgb(31 41 55 / var(--tw-text-opacity))}
+</style></head> <body> <!-- <Header /> --> <main> <article> <a href="/blog" class="px-4 py-2 rounded-xl text-gray-800 dark:text-fuchsia-300 border-gray-800 dark:border-fuchsia-300 border-2 ">Volver</a> <div class="hero-image"> <img src="/blog/blog-placeholder-3.jpg" alt=""> </div> <div class="prose"> <div class="title"> <div class="date"> <time datetime="2022-12-25T06:00:00.000Z" class="text-gray-600 dark:text-gray-200/50"> Dec 25, 2022 </time>  </div> <h1 class="text-3xl md:text-5xl mb-5 text-gray-800 font-bold dark:text-gray-300">¿Que es Spring Boot, y que es Spring Framework?</h1> <hr> </div>  <h2 id="spring-boot">Spring Boot 🍃.</h2>
+<p>Spring Boot es un marco de desarrollo de aplicaciones en Java basado en el framework Spring. Nos proporciona una forma rápida y sencilla de crear aplicaciones Java con una configuración mínima.</p>
+<p>Una de las principales características de Spring Boot es su enfoque en la convención sobre la configuración. Esto significa que muchas de las configuraciones necesarias para una aplicación, Spring se pueden establecer automáticamente, lo que nos permite como desarrolladores es en enfocarse en la lógica de negocio en lugar de una configuración detallada.</p>
+<p>Además, Spring Boot incluye un servidor web integrado, lo que significa que no es necesario configurar y desplegar una aplicación en un servidor web externo. Esto nos facilita el desarrollo y la ejecución de aplicaciones web de forma rápida y sencilla.</p>
+<p>Spring Boot también ofrece una amplia gama de características y funcionalidades para el desarrollo de aplicaciones empresariales, como la integración con bases de datos, la seguridad, la gestión de transacciones y la creación de servicios web.</p>
+<p>En resumen, Spring Boot es un marco de desarrollo de aplicaciones Java que simplifica la configuración y el desarrollo de aplicaciones empresariales, que nos permite centrarnos en la lógica de negocio y la funcionalidad de la aplicación.</p>
+<h2 id="spring-framework-️">Spring Framework 🖼️.</h2>
+<p>Spring Framework es un framework de desarrollo de aplicaciones Java que proporciona una infraestructura integral y modular para desarrollar aplicaciones empresariales. Es conocido por su enfoque basado en componentes, su facilidad de uso y su capacidad de integración con otras tecnologías.</p>
+<p>El objetivo principal de Spring Framework es simplificar el desarrollo de aplicaciones Java al proporcionar una abstracción de alto nivel sobre las APIs de Java, lo que facilita la implementación de patrones de diseño y buenas prácticas de programación. Además, Spring Framework ofrece características como la inversión de control (IoC) y la inyección de dependencias (DI), que ayudan a reducir la dependencia entre los componentes de la aplicación y promueven la reutilización del código.</p>
+<p>Spring Framework también incluye módulos para diferentes aspectos de desarrollo, como el acceso a bases de datos, la seguridad, el manejo de transacciones y la creación de servicios web. Estos módulos se pueden utilizar de forma independiente o combinados según las necesidades del proyecto.</p>
+<p>En resumen, Spring Framework es un framework completo y flexible que simplifica el desarrollo de aplicaciones Java al proporcionar una infraestructura modular, características de alto nivel y una amplia integración con otras tecnologías.</p>
+<h2 id="comparación">Comparación ☕.</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Aspecto</th><th>Spring Boot</th><th>Spring Framework</th></tr></thead><tbody><tr><td>Configuración.</td><td>Requiere configuración mínima debido a su enfoque en la convención sobre la configuración.</td><td>Requiere configuración detallada y manual.</td></tr><tr><td>Despliegue</td><td>Incluye un servidor web integrado, lo que facilita el desarrollo y la ejecución de aplicaciones web.</td><td>Requiere configurar y desplegar la aplicación en un servidor web externo.</td></tr><tr><td>Desarrollo de aplicaciones empresariales.</td><td>Ofrece una amplia gama de características y funcionalidades para el desarrollo de aplicaciones empresariales, como integración con bases de datos, seguridad, gestión de transacciones y creación de servicios web.</td><td>También ofrece características para el desarrollo de aplicaciones empresariales, pero requiere configuración manual y uso de módulos adicionales.</td></tr><tr><td>Enfoque</td><td>Se centra en simplificar la configuración y el desarrollo de aplicaciones Java, permitiendo a los desarrolladores centrarse en la lógica de negocio y la funcionalidad de la aplicación.</td><td>Se enfoca en proporcionar una infraestructura integral y modular para el desarrollo de aplicaciones Java, promoviendo buenas prácticas de programación y reutilización del código.</td></tr><tr><td>Uso de anotaciones</td><td>Utiliza anotaciones para configurar y definir componentes, controladores, rutas, entre otros.</td><td>También utiliza anotaciones, pero requiere más configuración manual en comparación con Spring Boot.</td></tr><tr><td>Facilidad de uso</td><td>Proporciona una forma rápida y sencilla de crear aplicaciones Java con configuración mínima.</td><td>Requiere más configuración y conocimiento técnico para su implementación.</td></tr></tbody></table>
+<p><a href="/blog/java/requerimientos">Siguiente Post ></a></p>  </div> </article> </main> <!-- <Footer /> --> </body></html>

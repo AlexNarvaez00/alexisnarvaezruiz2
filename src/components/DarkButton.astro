@@ -40,11 +40,14 @@ interface Props {
     if (callback) callback();
   };
 
+  // @ts-ignore
   if (isActiveDarkMode()) {
+    // @ts-ignore
     toggleMode(!isActiveDarkMode(),null);
   }
 
   buttonDark.addEventListener("click", (event) => {
+    // @ts-ignore
     if (isActiveDarkMode()) {
       toggleMode(true, () => document.documentElement.classList.remove("dark"));
       buttonDark.classList.add("bg-violet-600");
