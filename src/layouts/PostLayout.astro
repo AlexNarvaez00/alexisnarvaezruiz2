@@ -3,7 +3,6 @@
 import type { CollectionEntry } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import FormattedDate from "../components/FormattedDate.astro";
-import Layout from "./Layout.astro";
 import Button from "../components/Button.astro";
 import Title from "../components/Title.astro";
 
@@ -15,7 +14,7 @@ const updatedDate = null;
 //import Footer from '../components/Footer.astro';
 ---
 
-<html lang="es">
+<html lang="es" class="dark">
   <head>
     <BaseHead title={title} description={description} />
   </head>
@@ -23,10 +22,11 @@ const updatedDate = null;
     <!-- <Header /> -->
     <main>
       <article>
+        <Button href="/blog" class="">Volver</Button>
         <div class="hero-image">
           {
             heroImage && (
-              <img width={850} height={390} src={"/blog" + heroImage} alt="" />
+              <img src={"/blog" + heroImage} alt="" />
             )
           }
         </div>
@@ -42,7 +42,7 @@ const updatedDate = null;
                 )
               }
             </div>
-            <Title level="h1">{title}</Title>
+            <Title level="h1" class="dark:text-gray-300">{title}</Title>
             <hr />
           </div>
           <slot />

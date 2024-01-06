@@ -11,5 +11,5 @@ const { title, body, level } = Astro.props;
 <>
   {title ? <Title level={level} class="" >{title}</Title> : null  }
   <slot/>
-  {body ? <p class="text-base text-gray-800">{body}</p> : null }
+  {body ? <p class="text-lg md:text-base text-gray-800">{body}</p> : null }
 <>

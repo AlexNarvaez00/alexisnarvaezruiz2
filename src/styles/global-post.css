@@ -5,27 +5,20 @@
     font-family: "Atkinson", sans-serif;
     @apply p-0 m-0;
     @apply text-left text-lg;
-    @apply bg-gray-200 text-gray-800;
-     }
+    @apply bg-gray-200 text-gray-800 py-9 dark:bg-gray-900;
+  }
   main {
-    @apply max-w-3xl m-auto;
-    @apply px-12 py-4;
+    @apply max-w-4xl m-auto;
+    @apply px-16 py-6;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply text-gray-800;
-    @apply leading-tight mb-2;
+  h1, h2, h3,
+  h4, h5, h6 {
+    @apply text-gray-800 dark:text-gray-300;
+    @apply leading-tight mb-2 ;
   }
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    @apply font-semibold;
+  h2, h3, h4,
+  h5, h6 {
+    @apply font-semibold mt-12;
   }
   h1 {
     @apply text-3xl md:text-5xl;
@@ -48,10 +41,14 @@
   }
   a {
     @apply text-sky-500 hover:text-sky-600;
-    @apply hover:underline;
+    @apply dark:text-fuchsia-500 dark:hover:text-fuchsia-700;
+    @apply hover:underline ;
   }
   p {
-    @apply mb-10;
+    @apply mb-6 dark:text-gray-300;
+  }
+  p code {
+    @apply dark:text-gray-800/90 font-semibold;
   }
   /* .prose p { */
   /*   margin-bottom: 2em; */
@@ -63,10 +60,17 @@
     @apply text-base;
   }
   table {
-    @apply w-full;
+    @apply w-full text-gray-800 dark:text-gray-300;
+  }
+  tr{
+    @apply mb-2;
   }
   ul {
-    @apply list-disc;
+    @apply list-disc mb-4;
+  }
+  ul li {
+    @apply text-gray-800 dark:text-gray-200;
+    @applyt mb-3;
   }
   img {
     @apply max-w-full h-auto;
@@ -74,11 +78,12 @@
   }
   code {
     @apply py-0.5 px-2;
-    @apply bg-gray-200 rounded-lg;
+    @apply bg-gray-300 rounded-lg;
     /** background-color: rgb(var(--gray-light)); */
   }
   pre {
     @apply p-4 rounded-lg;
+    @apply mb-6;
   }
   pre > code {
     all: unset;
@@ -89,7 +94,8 @@
     @apply text-lg;
   }
   hr {
-    @apply border-t-gray-800/20 border-2;
+    @apply border-0;
+    @apply border-t-gray-800/20 dark:border-t-gray-200/10 border-t-2;
   }
   @media (max-width: 720px) {
     body {
@@ -120,18 +126,18 @@
 
   /** ---------------------------- */
   .hero-image {
-    @apply w-full;
+    @apply w-full mt-6;
   }
   .hero-image img {
     @apply rounded-3xl block;
-    @apply my-0 mx-auto shadow-lg;
+    @apply my-0 mx-auto shadow-2xl;
   }
   .prose {
     @apply mx-auto;
     @apply w-full text-gray-800;
   }
   .title {
-    @apply mb-3 py-3 px-0;
+    @apply mb-8 py-3 px-0;
     @apply text-center leading-tight;
   }
   .date {
