@@ -9,7 +9,7 @@ import Skills from "../components/Skills.astro";
 import Mail from "../components/icons/Mail.astro";
 import X from "../components/icons/X.astro";
 import Blogger from "../components/icons/Blogger.astro";
-import DarkButton from "../components/DarkButton.astro";
+import DarkButton from "../components/DarkButton.tsx";
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
@@ -58,7 +58,7 @@ import DarkButton from "../components/DarkButton.astro";
         level="h1"
         class="col-span-1 md:col-span-2 bg-violet-300 flex dark:bg-violet-500 dark:shadow-lg dark:shadow-violet-600/60"
       >
-        <DarkButton class="m-auto" />
+        <DarkButton client:only="react" class="m-auto" />
       </Card>
       <Card
         title="Edad"
