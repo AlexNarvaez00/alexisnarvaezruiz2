@@ -1,140 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Grid from "../components/Grid.astro";
-import Card from "../components/Card.astro";
-import GithubIcon from "../components/icons/Github.astro";
-import LinkedInIcon from "../components/icons/LinkedIn.astro";
 import Title from "../components/Title.astro";
-import Skills from "../components/Skills.astro";
-import Mail from "../components/icons/Mail.astro";
-import X from "../components/icons/X.astro";
-import Blogger from "../components/icons/Blogger.astro";
-import DarkButton from "../components/DarkButton.tsx";
+import Home from "../components/Home.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout title="Alexis Narvaez | Inicio.">
   <main class="m-auto w-full h-auto flex flex-col">
-    <Grid>
-      <Card
-        title=""
-        level="h1"
-        class="p-5 col-span-2 md:col-span-3 md:row-span-2 bg-zinc-300 dark:bg-zinc-800"
-      >
-        <Title level="h1" class="dark:text-gray-300">
-          Hola! Soy Alexis Narvaez.
-        </Title>
-        <p class={`text-lg md:text-2xl text-gray-800 dark:text-gray-200`}>
-          Soy <strong>Desarrollador Front-End</strong> con{" "}
-          <strong>React</strong>, además de eso cuento con experiencia en
-          tecnologias de <strong>Back-End</strong> como{" "}
-          <strong>PHP, Java y Python.</strong>
-        </p>
-        <p class={`text-lg md:text-2xl text-gray-800 dark:text-gray-200`}>
-          Me considero alguien centrado, constante y reflexivo en las cosas que
-          hago, lo cual me ha beneficiado para llegar al final de mis objetivos,
-          esto me ha permitido desarrollar la capacidad de pensar en mejores
-          soluciones.
-        </p>
-      </Card>
-      <Card
-        href="https://github.com/AlexNarvaez00"
-        level="h1"
-        class="col-span-1 bg-white shadow-lg flex items-center py-10 md:p-0"
-      >
-        <div class="w-full h-full m-auto flex justify-center items-center">
-          <GithubIcon class="size-12 text-gray-800" />
-        </div>
-      </Card>
-      <Card
-        href="https://www.linkedin.com/in/alexis-narvaez-ruiz"
-        level="h1"
-        class="col-span-1 bg-indigo-300 dark:bg-indigo-500 dark:shadow-lg dark:shadow-indigo-600/60 flex text-white"
-      >
-        <div class="w-full h-full m-auto flex justify-center items-center">
-          <LinkedInIcon class="size-14" />
-        </div>
-      </Card>
-      <Card
-        level="h1"
-        class="col-span-1 md:col-span-2 bg-violet-300 flex dark:bg-violet-500 dark:shadow-lg dark:shadow-violet-600/60"
-      >
-        <DarkButton client:only="react" class="m-auto" />
-      </Card>
-      <Card
-        title="Edad"
-        body="Años"
-        level="h4"
-        class="col-span-1 bg-amber-300 text-center flex flex-col justify-between p-5 dark:bg-amber-500 dark:shadow-lg dark:shadow-amber-600/60"
-      >
-        <Title class="font-extrabold text-gray-800" level="h1">24</Title>
-      </Card>
-      <Card
-        title="Nivel de Ingles"
-        body="2019-2021"
-        level="h4"
-        class="col-span-1 text-center flex flex-col justify-between bg-purple-300 p-2 md:p-5 dark:bg-purple-500 dark:shadow-lg dark:shadow-purple-600/60"
-      >
-        <Title class="font-extrabold text-gray-800" level="h1">B1</Title>
-      </Card>
-      <Card
-        level="h3"
-        href="/proyects"
-        class="col-span-2 md:col-span-3 bg-[url('/code.jpg')] text-white dark:text-gray-200 dark:shadow-lg dark:shadow-black/60"
-      >
-        <div class="p-5 bg-white/20 w-full h-full dark:bg-black/20">
-          <Title level="h3">Proyectos y experiencias</Title>
-          <p class="text-lg md:text-2xl">
-            Aquí puedes ver mis proyectos, experiencias, prácticas y más.
-          </p>
-        </div>
-      </Card>
-      <Card
-        level="h1"
-        class="col-span-2 bg-fuchsia-300 p-5 dark:bg-fuchsia-500 dark:shadow-lg dark:shadow-fuchsia-600/60"
-      >
-        <Skills />
-      </Card>
-      <Card
-        class="col-span-1 bg-sky-300 dark:bg-teal-500 flex-col justify-between p-10 md:p-0 dark:shadow-lg dark:shadow-teal-600/60 flex text-gray-800 text-center"
-        level="h4"
-      >
-        <div
-          class="w-full h-full m-auto flex justify-center items-center"
-          id="email"
-          title="Copiar Correo"
-        >
-          <Mail class="size-12 cursor-pointer" />
-        </div>
-      </Card>
-      <Card
-        class="col-span-1 bg-blue-300 dark:bg-blue-500 dark:shadow-lg dark:shadow-blue-600/60 flex text-gray-800"
-        href=""
-        level="h1"
-        href="https://www.x.com"
-      >
-        <div class="w-full h-full m-auto flex justify-center items-center">
-          <X class="size-12" />
-        </div>
-      </Card>
-      <Card
-        class="col-span-1 bg-orange-300 dark:bg-orange-500 dark:shadow-lg p-10 md:p-0 dark:shadow-orange-600/60 flex text-gray-800"
-        href=""
-        level="h1"
-        href="https://alexisnarvaezruiz.hashnode.dev/"
-      >
-        <div class="w-full h-full m-auto flex justify-center items-center">
-          <Blogger class="size-12 text-gray-800" />
-        </div>
-      </Card>
-    </Grid>
+    <Title level="h1" class="text-center dark:text-gray-300 mb-5">Inicio</Title>
+    <Home />
+    <Title level="h1" class="text-center dark:text-gray-300 my-5" id="projects">
+      Proyectos
+    </Title>
+    <Projects />
   </main>
 </Layout>
-
-<script>
-  const email = document.getElementById("email");
-  email.addEventListener("click", () => {
-    navigator.clipboard.writeText("ruiznarvaezalexis@gmail.com").then(() => {
-      alert("Correo Copiado!");
-    });
-  });
-</script>

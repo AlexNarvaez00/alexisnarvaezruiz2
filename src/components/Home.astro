@@ -1,0 +1,130 @@
+---
+import Title from "../components/Title.astro";
+import Grid from "./Grid.astro";
+import Card from "./Card.astro";
+import GithubIcon from "./icons/Github.astro";
+import LinkedInIcon from "./icons/LinkedIn.astro";
+import Skills from "./Skills.astro";
+import Mail from "./icons/Mail.astro";
+import X from "./icons/X.astro";
+import Blogger from "./icons/Blogger.astro";
+import DarkButton from "./DarkButton.tsx";
+import MailButton from "./MailButton.tsx";
+---
+
+<Grid>
+  <Card
+    title=""
+    level="h1"
+    class="p-5 col-span-2 md:col-span-3 md:row-span-2 bg-zinc-300 dark:bg-zinc-800"
+  >
+    <Title level="h2" class="dark:text-gray-300 my-5">
+      !Hola 👋! Soy Alexis Narvaez.
+    </Title>
+    <p class={`text-lg md:text-xl mb-3 text-gray-800 dark:text-gray-200`}>
+      Aprendí a programar a los <strong>15 años</strong> y hoy con 24 años cuento
+      con el título de <strong>Ingeniero en Sistemas Computacionales.</strong>
+    </p>
+    <p class={`text-lg md:text-xl text-gray-800 dark:text-gray-200`}>
+      Enfocado en el desarrollador <strong>Back-End</strong>, aun que tambien me
+      gusta desarrollar <strong>Front-End</strong>
+    </p>
+  </Card>
+  <Card
+    href="https://github.com/AlexNarvaez00"
+    level="h1"
+    class="col-span-1 bg-white shadow-lg flex items-center p-10 md:p-2"
+  >
+    <div
+      class="w-full h-full m-auto flex justify-center p-10 lg:p-0 items-center"
+    >
+      <GithubIcon class="size-12 text-gray-800" />
+    </div>
+  </Card>
+  <Card
+    href="https://www.linkedin.com/in/alexis-narvaez-ruiz"
+    level="h1"
+    class="col-span-1 bg-indigo-300 dark:bg-indigo-500 dark:shadow-lg dark:shadow-indigo-600/60 flex text-white"
+  >
+    <div class="w-full h-full m-auto flex justify-center items-center">
+      <LinkedInIcon class="size-14" />
+    </div>
+  </Card>
+  <Card
+    level="h1"
+    class="col-span-1 md:col-span-2 lg:col-span-2 bg-violet-300 flex dark:bg-violet-500 dark:shadow-lg dark:shadow-violet-600/60"
+  >
+    <DarkButton client:only="react" class="m-auto" />
+  </Card>
+  <Card
+    title="Edad"
+    body="Años"
+    level="h4"
+    class="col-span-1 bg-amber-300 text-center flex flex-col justify-between p-5 dark:bg-amber-500 dark:shadow-lg dark:shadow-amber-600/60"
+  >
+    <Title class="font-extrabold text-gray-800" level="h1">24</Title>
+  </Card>
+  <Card
+    title="Nivel de Ingles"
+    body="2019-2021"
+    level="h4"
+    class="col-span-1 text-center flex flex-col justify-between bg-purple-300 p-2 md:p-5 dark:bg-purple-500 dark:shadow-lg dark:shadow-purple-600/60"
+  >
+    <Title class="font-extrabold text-gray-800" level="h1">B1</Title>
+  </Card>
+  <Card
+    level="h3"
+    href="#projects"
+    target=""
+    class="col-span-2 md:col-span-2 lg:col-span-3 bg-[url('/code.jpg')] text-white dark:text-gray-200 dark:shadow-lg dark:shadow-black/60"
+  >
+    <div class="p-5 bg-white/20 w-full h-full dark:bg-black/20">
+      <Title level="h3" class="mb-5">Proyectos y experiencias</Title>
+      <p class="text-lg md:text-xl">
+        Aquí puedes ver mis proyectos, experiencias, prácticas y más.
+      </p>
+    </div>
+  </Card>
+  <Card
+    level="h1"
+    class="col-span-2 bg-fuchsia-300 p-5 dark:bg-fuchsia-500 dark:shadow-lg dark:shadow-fuchsia-600/60"
+  >
+    <Skills />
+  </Card>
+  <Card
+    class="col-span-1 bg-sky-300 dark:bg-teal-500 flex-col justify-between p-10 md:p-0 dark:shadow-lg dark:shadow-teal-600/60 flex text-gray-800 text-center"
+    level="h4"
+  >
+    <div
+      class="w-full h-full m-auto flex justify-center items-center"
+      id="email"
+      title="Copiar Correo"
+    >
+      <MailButton client:only="react">
+        <Mail class="size-12 cursor-pointer" />
+      </MailButton>
+    </div>
+  </Card>
+  <Card
+    class="col-span-1 bg-blue-300 dark:bg-blue-500 dark:shadow-lg dark:shadow-blue-600/60 flex text-gray-800"
+    href=""
+    level="h1"
+    href="https://twitter.com/AlexisNaravez"
+  >
+    <div
+      class="w-full h-full m-auto flex justify-center p-10 lg:p-0 items-center"
+    >
+      <X class="size-12" />
+    </div>
+  </Card>
+  <Card
+    class="col-span-1 bg-orange-300 dark:bg-orange-500 dark:shadow-lg p-10 md:p-0 dark:shadow-orange-600/60 flex text-gray-800"
+    href=""
+    level="h1"
+    href="https://alexisnarvaezruiz.hashnode.dev/"
+  >
+    <div class="w-full h-full m-auto flex justify-center items-center">
+      <Blogger class="size-12 text-gray-800" />
+    </div>
+  </Card>
+</Grid>
