@@ -1,6 +1,21 @@
 ---
 import Grid from "./Grid.astro";
+import Card from "./Card.astro";
+import Title from "./Title.astro";
 ---
 
-<Grid class="grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+<Grid class="grid-cols-2 md:grid-cols-3 lg:grid-cols-3 max-h-[80vh] min-h-screen">
+  <Card
+    level="h1"
+    class="col-span-1 md:col-span-1 bg-[url('/theme-creator.jpg')] bg-cover bg-center min-h-full md:min-h-max text-white dark:text-gray-200 dark:shadow-sm dark:shadow-black/40"
+    href="https://create-themes-nvchad.vercel.app/"
+    target="_blank"
+  >
+    <div class="p-5 w-full h-full flex flex-col justify-end items-start bg-gradient-to-t dark:from-gray-900 dark:via-gray-800/70 dark:to-gray-50/5 from-gray-200 via-gray-100/50 to-gray-50/0">
+      <Title level="h3" class="mb-5 dark:text-gray-300 text-gray-800">Themes NvChad Creator</Title>
+      <p class="text-lg md:text-xl dark:text-gray-200 text-gray-800">
+        Creador de temas para el editor de texto en terminal <strong>Neovim</strong> (NvChad).
+      </p>
+    </div>
+  </Card>
 </Grid>

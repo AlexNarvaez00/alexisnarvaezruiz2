@@ -25,7 +25,7 @@ export default function MailButton({ children }: Props) {
   return (
     <>
       <Toaster theme={!isActiveDarkMode() ? "light" : "dark"} />
-      <a href="#" onClick={handleClick}>
+      <a href="#" onClick={handleClick} className="w-full h-full flex justify-center items-center">
         {children}
       </a>
     </>

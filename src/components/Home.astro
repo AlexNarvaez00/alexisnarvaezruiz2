@@ -12,7 +12,7 @@ import DarkButton from "./DarkButton.tsx";
 import MailButton from "./MailButton.tsx";
 ---
 
-<Grid>
+<Grid class="grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
   <Card
     title=""
     level="h1"
@@ -33,10 +33,10 @@ import MailButton from "./MailButton.tsx";
   <Card
     href="https://github.com/AlexNarvaez00"
     level="h1"
-    class="col-span-1 bg-white shadow-lg flex items-center p-10 md:p-2"
+    class="col-span-1 bg-white shadow-lg flex items-center md:p-2"
   >
     <div
-      class="w-full h-full m-auto flex justify-center p-10 lg:p-0 items-center"
+      class="w-full h-full m-auto flex justify-center p-8 sm:p-10 lg:p-0 items-center"
     >
       <GithubIcon class="size-12 text-gray-800" />
     </div>
@@ -76,7 +76,7 @@ import MailButton from "./MailButton.tsx";
     level="h3"
     href="#projects"
     target=""
-    class="col-span-2 md:col-span-2 lg:col-span-3 bg-[url('/code.jpg')] text-white dark:text-gray-200 dark:shadow-lg dark:shadow-black/60"
+    class="col-span-2 md:col-span-2 lg:col-span-3 bg-[url('/code.jpg')] bg-cover bg-center text-white dark:text-gray-200 dark:shadow-lg dark:shadow-black/60"
   >
     <div class="p-5 bg-white/20 w-full h-full dark:bg-black/20">
       <Title level="h3" class="mb-5">Proyectos y experiencias</Title>
@@ -127,4 +127,12 @@ import MailButton from "./MailButton.tsx";
       <Blogger class="size-12 text-gray-800" />
     </div>
   </Card>
+  <Card
+    level="h1"
+    href="/AlexisNarváezRuiz_CV.pdf"
+    class="col-span-1 bg-zinc-300 dark:bg-zinc-800 text-center flex flex-col justify-center p-5 dark:shadow-lg lg:p-10 aspect-square"
+  >
+    <Title class="font-extrabold flex justify-center items-center dark:text-gray-300" level="h1">CV</Title>
+  </Card>
+
 </Grid>

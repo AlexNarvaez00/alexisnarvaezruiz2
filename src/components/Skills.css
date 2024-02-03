@@ -2,6 +2,6 @@
 
 @layer components {
   .icon-skills {
-    @apply w-full h-full size-8;
+    @apply size-7;
   }
 }
